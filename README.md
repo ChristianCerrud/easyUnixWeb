@@ -46,5 +46,3 @@ easyUnixWeb/
 ├── script.js       # Logic (Search & Translation)
 └── README.md       # Project documentation
 ```
-
-by Ccerrud
