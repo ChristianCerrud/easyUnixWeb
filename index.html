@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <title>Serveur Web sous Linux - Christian Cerrud</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/normalize.css">
+
+  <!-- Bootstrap CSS v5.3.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <!--W3 icons link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm bg-light">
+      <div class="container-fluid">
+        <h2 class="navbar-brand fa fa-linux">LINUX <span>COMMANDS</span></h2>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#presentation">PRÉSENTATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#install">INSTALLATION ET PROGRAMMES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#files">FICHIERS ET RÉPERTOIRES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#users">UTILISATEURS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#groups">GROUPES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#serveur">SERVEUR</a>
+          </li>
+        </ul>
+
+      </div>    
+    </nav>
+  </header>
+  <main>
+    <!--Section 01-->
+    <section id="presentation">
+      <div class="contairner-sections"><br><br><br><br>
+        <h5 class="titre">Présentation</h5>
+        <p class="subtitle">Linux® est un système d'exploitation Open Source. Un système d'exploitation est un logiciel qui gère directement les composants physiques du système ainsi que ses ressources, telles que le processeur, la mémoire et le stockage. Il représente l'interface entre les applications et le matériel. C'est lui qui établit les connexions entre tous les logiciels et les ressources physiques requises pour l'exécution des différentes tâches.</p><br><br>
+      </div>
+    </section>
+    <!--Section 02-->
+    <section class="contairner-sections" id="install">
+        <h5 class="titre">LISTE DES COMMANDES</h5><br><br>
+        
+        <h5 class="commande">1) dnf</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Utilisé pour installer des applications et mettre à jour le système.</p>
+
+        <h6 class="subtitle">Options/exemples</h6>
+        <h6 class="OptEx">a) install dnf</h6>
+        <p class="paragOptEx">Est utilisé pour effectuer la mise à jour des commandes dnf.</p>
+
+        <h6 class="OptEx">b) update dnf</h6>
+        <p class="paragOptEx">Est utilisée pour effectuer la mise à jour dnf.</p>
+
+        <h6 class="OptEx">c) list</h6>
+        <p class="paragOptEx">Cette commande indique si le paquetage spécifié est disponible dans tous les paquetages de dnf. Il s'agit d'une recherche rigide, ce qui signifie qu'elle répond au nom exact spécifié.</p>
+
+        <h6 class="OptEx">d) list | less</h6>
+        <p class="paragOptEx">Est utilisé pour observer tous les paquets disponibles mais page pour page.</p>
+
+        <h6 class="OptEx">e)info</h6>
+        <p class="paragOptEx">Fournit les détails du paquetage indiqué ci-dessous.</p>
+
+        <h6 class="OptEx">f) search</h6>
+        <p class="paragOptEx">Pour rechercher un paquet dans les dépôts, tapez.</p>
+
+        <h6 class="OptEx">g) provides</h6>
+        <p class="paragOptEx">Permet de savoir quels sont les fichiers utilisés ou contenus dans un paquetage.</p>
+
+        <h6 class="OptEx">h) grouplist</h6>
+        <p class="paragOptEx">Cette commande permet de consulter une liste de paquetages regroupés.</p>
+
+        <h6 class="OptEx">i) groupinstall</h6>
+        <p class="paragOptEx">Cette commande effectue l'installation d'un groupe choisi dans la liste disponible.</p>
+
+        <h6 class="OptEx">j) groupupdate &lt;nom de groupe paquetage&gt;</h6>
+        <p class="paragOptEx">Est utilisé pour effectuer une mise à jour d'un groupe de paquets.</p>
+
+        <h6 class="OptEx">k) remove</h6>
+        <p class="paragOptEx">Est utilisée pour désinstaller le paquetage sélectionné.</p>
+
+        <h6 class="OptEx">l) groupremove</h6>
+        <p class="paragOptEx">Cette commande est utilisée pour désinstaller un groupe de paquets installés.</p>
+
+        <h6 class="OptEx">m) --exclude</h6>
+        <p class="paragOptEx">Il est utilisé pour effectuer une mise à jour en faisant une exception du paquet indiqué dans la syntaxe.</p>
+
+        <h6 class="OptEx">n) check-update</h6>
+        <p class="paragOptEx">Est utilisé pour vérifier si des mises à jour sont disponibles dans dnf.</p>
+
+        <h6 class="OptEx">o) update -y</h6>
+        <p class="paragOptEx">Est d'effectuer toutes les demandes disponibles.</p>
+
+        <h6 class="OptEx">p) clean all</h6>
+        <p class="paragOptEx">Supprime les fichiers de cache générés à partir des métadonnées du référentiel. Cela oblige DNF à régénérer les fichiers de cache lors de sa prochaine exécution.</p>
+
+        <h5 class="commande">2) rpm</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">rpm est un puissant gestionnaire de paquets pour Red Hat, Suse et Fedora Linux. Il peut être utilisé pour construire, installer, interroger, vérifier, mettre à jour et supprimer/effacer des paquets de logiciels individuels. Un paquetage se compose d'une archive de fichiers et d'informations sur le paquetage,</p>
+
+        <h5 class="commande">3) geany</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Ce mot est le nom du programme d'édition qui est utilisé pour éditer les fichiers de manipulation des données du serveur.</p>
+
+        <h5 class="commande">4) firefox</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande est utilisée pour lancer le programme Firefox.</p>
+        <h6 class="subtitle">Options/exemples</h6>
+
+        <p class="OptEx">a) firefox http://localhost/~ProjwebA<br>
+        <p class="utilGen">Cette commande a été utilisée pour accéder à la page web (index.html) sur l'hôte local de l'utilisateur Mario.</p>
+
+        <h5 class="commande">5) chromium-browser</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande a été utilisée pour lancer le programme Chromium (Chrome).</p>
+
+        <h5 class="commande">6) npm install</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande permet d'installer la bibliothèque npm, utilisée dans l'environnement Node.js.</p>
+
+        <h5 class="commande">7) ctrl+c</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande permet de fermer le projet Node.</p>
+
+        <h5 class="commande">8) kill $(lsof -t -i : port)</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande est utilisée pour forcer la fermeture du projet Node.</p>
+
+    </section >
+
+    <section class="contairner-sections" id="files">
+      <h5 class="commande">9) nano</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Il s'agit d'un système d'édition de texte préinstallé sur macOS et la plupart des distributions Linux.</p>
+
+      <h5 class="commande">10) echo</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Il s'agit d'une commande Linux intégrée qui permet d'afficher le texte transmis en tant qu'argument. C'est l'une des commandes Linux de base utilisées dans les scripts shell et les fichiers Bash pour afficher le texte d'état de sortie sur la ligne de commande et permet également de créer un fichier texte et d'y insérer le texte détaillé dans la commande.</p>
+
+      <h5 class="commande">11) cat</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Permet d'afficher le contenu "texte" d'un fichier txt.</p>
+
+      <h5 class="commande">12) mkdir</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Utilité générale : Utilisé pour créer des dossiers ou des répertoires</p>
+
+      <h6 class="subtitle">Options/exemples</h6>
+      <h6 class="OptEx">a) -p ou –parents</h6>
+      <p class="paragOptEx">Vous pouvez créer des sous-répertoires d'un répertoire. Il créera d'abord le répertoire parent, s'il n'existe pas. Mais s'il existe déjà, il n'affichera pas de message d'erreur et continuera à créer des sous-répertoires.</p>
+
+      <h5 class="commande">13) rm</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande est utilisée pour supprimer des fichiers ou des répertoires.</p>
+
+      <h6 class="subtitle">Options/exemples</h6>
+      <h6 class="OptEx">a) -f</h6>
+      <p class="paragOptEx">Permet d'effacer des fichiers, ne nécessite pas de confirmation de l'effacement et n'affiche pas de message de diagnostic.</p>
+
+      <h6 class="OptEx">b) -i</h6>
+      <p class="paragOptEx">Est destiné à la suppression et demande à l'utilisateur de confirmer la suppression de chaque fichier. Si la réponse ne commence pas par "y" ou "Y", le fichier est ignoré. Si les options -f et -i sont données simultanément, la dernière option de la ligne de commande a l'avantage.</p>
+
+      <h6 class="OptEx">c) -r ou -R</h6>
+      <p class="paragOptEx">Supprime de manière récursive les sous-répertoires. Cette commande nécessite une confirmation pour chaque fichier ou sous-répertoire à supprimer (ce qui peut prendre du temps).</p>
+
+      <h5 class="commande">14) tree</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Ici, la commande `tree` affichera la structure du répertoire, à partir du répertoire courant.</p>
+
+      <h6 class="subtitle">Options/exemples</h6>
+      <h6 class="OptEx">a) -d</h6>
+      <p class="paragOptEx">Il affiche la hiérarchie des répertoires à partir du répertoire courant ou d'un répertoire spécifié. Il affiche la hiérarchie des répertoires à partir du répertoire courant ou d'un répertoire spécifié. Affiche la structure des dossiersAffiche la structure des dossiers Affiche la structure des dossiers</p>
+
+      <h5 class="commande">15) mv</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Déplace ou renomme des fichiers ou des répertoires.</p>
+
+      <h5 class="commande">16) head</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Affiche la première partie (10 lignes par défaut) de chacun des fichiers mentionnés ci-dessus. La lecture s'effectue sur l'entrée standard.</p>
+
+      <h6 class="subtitle">Options/exemples</h6>
+      <h6 class="OptEx">a) -c</h6>
+      <p class="paragOptEx">Affiche le nombre de lignes qui suivent la commande.</p>
+
+      <h5 class="commande">17) tail</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Affiche la dernière partie (par défaut : 10 lignes) de chacun des fichiers indiqués.</p>
+
+      <h6 class="subtitle">Options/exemples</h6>
+      <h6 class="OptEx">a) -c</h6>
+      <p class="paragOptEx">Affiche le nombre de dernières lignes suivant la commande.</p>
+
+      <h5 class="commande">18) Pwd</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">La commande "pwd" affiche le nom complet (le chemin complet) du répertoire actuel/de travail.</p>
+
+      <h5 class="commande">19) cp</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande permet de copier des fichiers dans le même référentiel et dans un référentiel détaillé.</p>
+
+      <h6 class="subtitle">Options/exemples</h6>
+      <h6 class="OptEx">a) -R</h6>
+      <p class="paragOptEx">Consiste à copier le contenu d'un référentiel dans un autre.</p>
+
+      <h5 class="commande">20) ls</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Il est utilisé pour lister les répertoires et les fichiers présents dans le dossier dans lequel nous nous trouvons.</p>
+
+      <h6 class="subtitle">Options/exemples</h6>
+      <h6 class="OptEx">a) -F</h6>
+      <p class="paragOptEx">Est de savoir si un fichier donné est normal, un répertoire, un lien symbolique, un exécutable ou un fichier réseau, mais n'a pas besoin d'informations sur les autorisations ou les propriétaires.</p>
+
+      <h6 class="OptEx">b) -R</h6>
+      <p class="paragOptEx">Demande à ls d'énumérer les sous-répertoires de manière récursive.</p>
+
+      <h6 class="OptEx">c) -a</h6>
+      <p class="paragOptEx">Linux utilise le point . comme préfixe pour les fichiers cachés. Ceux-ci sont parfois appelés fichiers point. Incluez-les dans la sortie à l'aide de l'indicateur -a.</p>
+
+      <h6 class="OptEx">d) -l</h6>
+      <p class="paragOptEx">Énumère les détails des fichiers et des répertoires, y compris les autorisations, les propriétaires, les groupes, la taille des fichiers et les dates de modification, en énumérant un fichier ou un répertoire par ligne.</p>
+
+      <h6 class="OptEx">e) -r</h6>
+      <p class="paragOptEx">Trier les fichiers en sens inverse.</p>
+
+      <h6 class="OptEx">f) -t</h6>
+      <p class="paragOptEx">Trie le contenu des répertoires par date plutôt que par ordre alphabétique. Les fichiers les plus récents apparaissent en premier.</p>
+
+      <h6 class="OptEx">g) -u</h6>
+      <p class="paragOptEx">Utilise la date du dernier accès aux fichiers au lieu de la date de modification.</p>
+
+      <h6 class="OptEx">h) -h</h6>
+      <p class="paragOptEx">Ajoutez une lettre indiquant l'unité de taille, par exemple M pour mégaoctets, K pour kilooctets.</p>
+
+      <h6 class="OptEx">i) -m</h6>
+      <p class="paragOptEx">Permet de lister le contenu des répertoires les uns après les autres en les séparant par une virgule.</p>
+
+      <h6 class="OptEx">j) -S</h6>
+      <p class="paragOptEx">Trie les répertoires par taille de fichier plutôt que par ordre alphabétique. Les fichiers les plus volumineux sont affichés en premier.</p>
+
+      <h6 class="OptEx">k) -al</h6>
+      <p class="paragOptEx">Afficher le contenu des sous répertoires</p>
+      
+      <h5 class="commande">21) wc</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Compte le nombre d'octets, de mots séparés par des espaces blancs et de nouvelles lignes dans chacun des fichiers indiqués, qui sont affichés dans cet ordre.</p>
+
+      <h6 class="subtitle">Options/exemples</h6>
+      <h6 class="OptEx">a) -c</h6>
+      <p class="paragOptEx">Affiche uniquement le nombre d'octets.</p>
+
+      <h6 class="OptEx">b) -m</h6>
+      <p class="paragOptEx">Affiche uniquement le nombre de caractères.</p>
+
+      <h6 class="OptEx">c) -w</h6>
+      <p class="paragOptEx">Affiche uniquement le nombre de mots.</p>
+
+      <h6 class="OptEx">d) -l</h6>
+      <p class="paragOptEx">Affiche uniquement le nombre de sauts de lignes.</p>
+
+      <h6 class="OptEx">e) -L</h6>
+      <p class="paragOptEx">Affiche uniquement la longueur de la plus grande ligne.</p>
+
+      <h6 class="OptEx">f) -cl</h6>
+      <p class="paragOptEx">La commande Linux wc -cl est utilisée pour compter le nombre de lignes et d'octets dans un fichier ou une entrée standard.</p>
+
+      <h6 class="OptEx">g) --help</h6>
+      <p class="paragOptEx">Affiche un message d'aide sur la sortie standard, et se terminer normalement.</p>
+
+      <h5 class="commande">22) ls</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Il est utilisé pour lister les répertoires et les fichiers présents dans le dossier dans lequel nous nous trouvons.</p>
+      <h6 class="subtitle">Options/exemples</h6>
+
+      <h6 class="OptEx">a) -l</h6>
+      <p class="paragOptEx">Il fournira des informations détaillées sur les fichiers et les répertoires dans le répertoire actuel, y compris les autorisations, le propriétaire, le groupe, la taille, la date de modification et d'autres détails.</p>
+
+      <h5 class="commande">23) ll</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Il fournira des informations détaillées sur les fichiers et les répertoires dans le répertoire actuel, y compris les autorisations, le propriétaire, le groupe, la taille, la date de modification et d'autres détails.</p>
+      <h6 class="subtitle">Options/exemples</h6>
+
+      <h6 class="OptEx">a) -d</h6>
+      <p class="paragOptEx">Cette option permet d'obtenir des informations spécifiques sur un répertoire sans afficher la liste de son contenu et de ses autorisations.</p>
+
+      <h5 class="commande">24) chown</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Il est utilisé pour changer le propriétaire des fichiers et des répertoires.</p>
+      <h6 class="subtitle">Options/exemples</h6>
+
+      <h5 class="commande">25) chmod</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Il est utilisé pour modifier les autorisations d'accès aux fichiers et aux répertoires.</p>
+      <h6 class="subtitle">Options/exemples</h6>
+
+      <h6 class="OptEx">a) u</h6>
+      <p class="paragOptEx">Représente les autorisations du propriétaire du fichier ou du répertoire.
+        <ul>
+          <li class="paragOptEx">r (read) : permet de lire le fichier ou de visualiser le contenu du répertoire.</li>
+          <li class="paragOptEx">w (write) : permet d'écrire ou de modifier le fichier ou de créer, supprimer et renommer des fichiers dans le répertoire.</li>
+          <li class="paragOptEx">x (exécuter) : Permet d'exécuter le fichier en tant que programme ou d'accéder au contenu du répertoire.</li>
+        </ul>
+      </p>
+      <h6 class="OptEx">b) g</h6>
+      <p class="paragOptEx">Représente les autorisations du groupe auquel appartient le fichier ou le répertoire.</p>
+      <h6 class="OptEx">c) o</h6>
+      <p class="paragOptEx">Représente les autorisations pour tout autre utilisateur qui n'est pas le propriétaire ou qui ne fait pas partie du groupe.</p>
+      <p class="OptEx">e) a+rx<br>
+      <p class="utilGen">Cette option a été utilisée pour donner accès aux dossiers et fichiers contenant les pages web à publier sur le serveur.</p>
+      
+      <h5 class="commande">26) mkdir</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande a été utilisée pour créer un répertoire.</p>
+
+    </section>
+
+    <!--Section 03-->
+    <section class="contairner-sections" id="users">
+        <h5 class="commande">27) su –</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande permet de changer d'utilisateur. Si aucun nom d'utilisateur n'est donné, elle appelle l'utilisateur root.</p>
+      
+        <h5 class="commande">28) useradd</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande permet de créer un utilisateur, mais l'utilisateur est créé inactif par défaut.</p>
+
+        <h5 class="commande">29) id</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande permet d'afficher des informations détaillées sur l'utilisateur, tant sur le groupe principal auquel il est affecté que sur le groupe secondaire, le cas échéant.</p>
+
+        <h5 class="commande">30) passwd</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Il est utilisé pour activer un compte créé qui nécessite la mise en place d'un mot de passe pour ce nouvel utilisateur.</p>
+        <h6 class="subtitle">Options/exemples</h6>
+
+        <h6 class="OptEx">a) -e</h6>
+        <p class="paragOptEx">Il est utilisé pour que la prochaine fois que vous lirez, vous soyez obligé de changer votre mot de passe.</p>
+        <h6 class="OptEx">b) -d</h6>
+        <p class="paragOptEx">Il est utilisé pour supprimer le mot de passe d'un compte et le connecter sans mot de passe.</p>
+        <h6 class="OptEx">c) -x</h6>
+        <p class="paragOptEx">Il est utilisé pour faire expirer le mot de passe d'un compte (avant cette option, vous devez entrer l'utilisateur et après l'option, vous devez spécifier le nombre de jours pendant lesquels le mot de passe doit expirer). Par exemple : passwd cerrud -x 90.</p>
+        <h6 class="OptEx">d) -l</h6>
+        <p class="paragOptEx">Il est utilisée pour verrouiller un compte.</p>
+        <h6 class="OptEx">e) -u</h6>
+        <p class="paragOptEx">Il est utilisé pour déverrouiller un compte.</p>
+
+        <h5 class="commande">31) userdel</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Il est utilisé pour activer un compte créé qui nécessite la mise en place d'un mot de passe pour ce nouvel utilisateur.</p>
+        <h6 class="subtitle">Options/exemples</h6>
+
+        <h6 class="OptEx">a) -r</h6>
+        <p class="paragOptEx">Cette option supprime le répertoire d'un utilisateur, y compris le répertoire personnel et la boîte aux lettres du compte.</p>
+
+        <h5 class="commande">32) chfn</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande permet de modifier les informations relatives à l'utilisateur stockées dans le fichier "/etc/passwd".</p>
+
+        <h5 class="commande">33) usermod</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Il est utilisé pour lister les répertoires et les fichiers présents dans le dossier dans lequel nous nous trouvons.</p>
+        <h6 class="subtitle">Options/exemples</h6>
+
+        <h6 class="OptEx">a) -G</h6>
+        <p class="paragOptEx">Dans ce cas, il montre les détails des dossiers créés, dans ce cas les utilisateurs et dans ce cas nous pouvons valider la date de création. Cela confirme que le processus a été exécuté.</p>
+        <h6 class="OptEx">b) -c</h6>
+        <p class="paragOptEx">Utilisé pour les commentaires et si le commentaire a plus d'un mot, il doit être placé entre guillemets.</p>
+        <h6 class="OptEx">c) -m</h6>
+        <p class="paragOptEx">Permet de déplacer le répertoire racine vers le nouveau répertoire à créer s'il n'existe pas.</p>
+        <h6 class="OptEx">d) -e</h6>
+        <p class="paragOptEx">Permet de spécifier une date d'expiration pour le compte d'utilisateur. Cela signifie qu'après la date spécifiée, l'utilisateur ne pourra plus se connecter au système. La date d'expiration est définie au format AAAA-MM-JJ, c'est-à-dire année-mois-jour.</p>
+        <h6 class="OptEx">e) -f</h6>
+        <p class="paragOptEx">Permet de définir la date d'inactivité d'un compte utilisateur. Une fois la période d'inactivité spécifiée écoulée, le compte est considéré comme inactif et est généralement verrouillé.</p>
+        <h6 class="OptEx">f) -L</h6>
+        <p class="paragOptEx">Permet de verrouiller un compte d'utilisateur.</p>
+        <h6 class="OptEx">g) -U</h6>
+        <p class="paragOptEx">Permet de déverrouiller le mot de passe d'un utilisateur.</p>
+        <h6 class="OptEx">h) -aG</h6>
+        <p class="paragOptEx">Cette option permet d'ajouter des utilisateurs à un sous-groupe supplémentaire.</p>
+
+        <h5 class="commande">34) lastlog</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Permet d'afficher les informations relatives à la dernière connexion de tous les utilisateurs du système.</p>
+        <h6 class="subtitle">Options/exemples</h6>
+
+        <h6 class="OptEx">a) -t</h6>
+        <p class="paragOptEx">Permet d'afficher des informations sur les utilisateurs dont la dernière connexion a eu lieu après la date ou l'heure spécifiée. Vous pouvez utiliser cette option pour filtrer les résultats afin de n'afficher que les utilisateurs qui se sont connectés après une certaine date.</p>
+        <h6 class="OptEx">b) -u</h6>
+        <p class="paragOptEx">Vous permet d'afficher des informations spécifiques sur un utilisateur au lieu d'une liste de tous les utilisateurs. Vous devez fournir le nom d'utilisateur comme argument pour cette option. Cette option est utile pour vérifier la date de la dernière connexion d'un utilisateur particulier.</p>
+
+        <h5 class="commande">35) last</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande permet d'afficher une liste des utilisateurs qui se sont connectés au système.</p>
+        <h6 class="subtitle">Options/exemples</h6>
+        <h6 class="OptEx">a) -R</h6>
+        <p class="paragOptEx">Permet d'afficher la date au format journal (secondes depuis le 1er janvier 1970).</p>
+        <h6 class="OptEx">b) -n num</h6>
+        <p class="paragOptEx">Utilisé pour afficher un nombre limité d'enregistrements. Par exemple, "last -n 10" affichera les 10 dernières sessions de connexion.</p>
+        <h6 class="OptEx">c) -f fichier</h6>
+        <p class="paragOptEx">Permet de spécifier le fichier journal à utiliser. Par défaut, "last" utilise "/var/log/wtmp" comme fichier journal, mais cette option vous permet de spécifier un autre fichier journal.</p>
+        <h6 class="OptEx">d) -adx</h6>
+        <p class="paragOptEx">Est la combinaison de trois options qui permettent d'afficher toutes les sessions, y compris les inactives, et d'afficher l'adresse IP du terminal de connexion au lieu du nom d'hôte.</p>
+        <h6 class="OptEx">e) -a</h6>
+        <p class="paragOptEx">Cette option permet d'afficher toutes les sessions de connexion, y compris les sessions inactives.</p>
+        <h6 class="OptEx">f) -d</h6>
+        <p class="paragOptEx">Cette option permet d'afficher l'adresse IP ou le nom d'hôte du terminal à partir duquel vous êtes connecté.</p>
+        <h6 class="OptEx">g) -x</h6>
+        <p class="paragOptEx">Cette option permet d'afficher des informations supplémentaires, notamment les utilisateurs actuellement connectés au système, ainsi que l'heure d'arrêt ou de redémarrage du système.</p>
+        
+    </section>
+    <!--Section 04-->
+    <section class="contairner-sections" id="groups">
+
+        <h5 class="commande">36) groups</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande permet de dresser la liste de tous les groupes (primaires et secondaires) d'un utilisateur.</p>
+        <h5 class="commande">37) w</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Permet d'afficher des informations sur les utilisateurs actuellement connectés au système. Il fournit une liste des utilisateurs qui se sont connectés au système, ainsi que des détails tels que l'heure à laquelle ils se sont connectés, leur localisation et ce qu'ils sont en train de faire.</p>
+
+        <h5 class="commande">38) groupadd</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande est utilisée pour la création de groupes.</p>
+
+        <h5 class="commande">39) groupdel</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande permet de supprimer un groupe.</p>
+
+        <h5 class="commande">40) gpassw</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Est utilisé pour gérer les groupes sur un système Linux. Vous pouvez l'utiliser pour modifier les mots de passe des groupes ou pour ajouter et supprimer des utilisateurs de groupes spécifiques.</p>
+        <h6 class="subtitle">Options/exemples</h6>
+
+        <h6 class="OptEx">a) -a</h6>
+        <p class="paragOptEx">Permet d'ajouter des utilisateurs à un groupe spécifique. Lorsque vous utilisez cette option, vous devez spécifier le nom de l'utilisateur que vous souhaitez ajouter au groupe.</p>
+
+        <h6 class="OptEx">a) -R</h6>
+        <p class="paragOptEx">Il est pour changer le propriétaire d'un répertoire et de tout son contenu de manière récursive.</p>
+
+        <h5 class="commande">41) chgrp</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Il est pour modifier le groupe auquel appartient un fichier ou un répertoire.</p>
+        <h6 class="subtitle">Options/exemples</h6>
+
+        <h6 class="OptEx">a) -R</h6>
+        <p class="paragOptEx">Il est pour changer le propriétaire d'un répertoire et de tout son contenu de manière récursive.</p>
+
+        <h5 class="commande">42) clear</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Il permet d'effacer du terminal toutes les informations affichées jusqu'à présent.</p>
+
+        <h5 class="commande">43) chown</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande est utilisée pour changer le propriétaire d'un répertoire ou d'un fichier spécifié dans la syntaxe de la commande.</p>
+
+        <h5 class="commande">44) ll</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande est utilisée pour afficher des informations détaillées sur les fichiers et les répertoires dans le répertoire actuel ou en entrant l'adresse du répertoire ou du fichier dont vous voulez connaître les détails.</p>
+        <h6 class="subtitle">Options/exemples</h6>
+
+        <h6 class="OptEx">a) -d;</h6>
+        <p class="paragOptEx">Cette option permet d'obtenir des informations spécifiques sur un répertoire sans afficher la liste de son contenu et de ses autorisations.</p>
+
+        <h5 class="commande">45) touch</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande est utilisée pour créer un fichier vide (sans aucune information à l'intérieur) sur un dépôt défini dans le laboratoire.</p>
+
+        <h5 class="commande">46) gpasswd</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande est utilisée pour ajouter des utilisateurs à un groupe défini (dans ce cas, des utilisateurs).</p>
+        <h6 class="subtitle">Options/exemples</h6>
+
+        <h6 class="OptEx">a) -a</h6>
+        <p class="paragOptEx">Permet d'ajouter des utilisateurs à un groupe spécifique. Lorsque vous utilisez cette option, vous devez spécifier le nom de l'utilisateur que vous souhaitez ajouter au groupe.</p>
+
+        <h5 class="commande">47) chgrp</h5>
+        <h6 class="subtitle">Utilité générale :</h6>
+        <p class="utilGen">Cette commande permet de modifier le groupe auquel appartient un fichier ou un répertoire. Dans le cas présent, pour modifier le groupe, le groupe nommé utilisateurs est propriétaire.</p>
+        <h6 class="subtitle">Options/exemples</h6>
+
+        <h6 class="OptEx">a) -R (seulement si c'est applicable ou nécessaire)</h6>
+        <p class="paragOptEx">Il est pour changer le propriétaire d'un répertoire et de tout son contenu de manière récursive.</p>
+
+    </section>
+
+    <section class="contairner-sections" id="serveur">
+
+      <h5 class="commande">48) hostnamectl hostname</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Pour ouvrir un fichier avec une application spécifique, vous devez indiquer le nom de l'application et l'adresse du fichier avec le nom du fichier.</p>
+
+      <h5 class="commande">49) nmcli networking off</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande est utilisée pour désactiver les fonctionnalités du réseau.</p>
+
+      <h5 class="commande">50) nmcli networking on</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande est utilisée pour activer la fonctionnalité du réseau.</p>
+
+      <h5 class="commande">51) systemd-resolve --status</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande fournit des informations sur les paramètres DNS et d'autres aspects de la résolution de noms.</p>
+
+      <h5 class="commande">52) ping</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande est utilisée pour vérifier la connectivité entre deux nœuds d'un réseau.</p>
+
+      <h5 class="commande">53) systemctl status httpd</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande permet de vérifier l'état du service Apache HTTP Server (httpd).</p>
+
+      <h5 class="commande">54) firewall-cmd</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande linux est un gestionnaire de pare-feu.</p>
+      <h6 class="subtitle">Options/exemples</h6>
+
+      <h6 class="OptEx">a) –get-active-zones</h6>
+      <p class="paragOptEx">Cette commande permet d'obtenir des informations sur les interfaces actives du service de pare-feu.</p>
+      <h6 class="OptEx">b) –zone = trusted</h6>
+      <p class="paragOptEx">est utilisé pour changer la zone de l'interface réseau spécifique en zone "trusted" (de confiance) dans le service de firewall.</p>
+      <h6 class="OptEx">c) –change</h6>
+      <p class="paragOptEx">permet de modifier le mappage de l'interface réseau ens37 avec la zone spécifiée.</p>
+      <h6 class="OptEx">d) –permanent</h6>
+      <p class="paragOptEx">est utilisé pour rendre la modification permanente.</p>
+      <h6 class="OptEx">e) –reload</h6>
+      <p class="paragOptEx">est utilisé pour recharger la configuration du firewall afin que les changements prennent effet immédiatement.</p>
+
+      <h5 class="commande">55) systemctl</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande permet d'examiner et de surveiller l'état du système et du gestionnaire de services.</p>
+      <h6 class="subtitle">Options/exemples</h6>
+
+      <p class="OptEx">a) start<br>
+      <p class="utilGen">Cette option est utilisée pour démarrer un service qui n’est pas en cours d’exécution.</p>
+
+      <p class="OptEx">b) restart<br>
+      <p class="utilGen">Cette option est utilisée pour redémarrer un service en cours d’exécution.</p>
+
+      <p class="OptEx">c) status<br>
+      <p class="utilGen">Cette option est utilisée pour vérifier l'état actuel du service.</p>
+      <ul>
+        <li class="OptEx">systemctl status sshd</li>
+        <p class="utilGen">est utilisé pour vérifier l'état actuel du service SSH.</p>
+      </ul>
+
+      <h5 class="commande">56) htpasswd</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande permet de créer un nouveau fichier de mots de passe.</p>
+      <h6 class="subtitle">Options/exemples</h6>
+
+      <p class="OptEx">a) -c<br>
+      <p class="utilGen">Cette option a été utilisée pour créer un nouveau fichier à l'adresse indiquée et ajouter un utilisateur avec le mot de passe correspondant. Il n'est utilisé que la première fois pour créer le fichier.</p>
+      <ul>
+        <li class="OptEx">htpasswd -c /var/www/comptes regine</li>
+        <li class="OptEx">htpasswd -c /home/boris/utilisateurs flavia</li>
+      </ul>
+
+      <h5 class="commande">57) netstat</h5>
+      <h6 class="subtitle">Utilité générale :</h6>
+      <p class="utilGen">Cette commande permet d'examiner et de surveiller l'état du système et du gestionnaire de services.</p>
+      <h6 class="subtitle">Options/exemples</h6>
+
+      <p class="OptEx">a) -tlnp<br>
+      <p class="utilGen">Cette option permet d'afficher les connexions TCP, les connexions en écoute (listening), les adresses de port et les numéros de port au format numérique, ainsi que les noms de programme et les ID de processus (PID) associés à chaque connexion.</p></p>
+
+      <p class="OptEx">b) -tlp<br>
+      <p class="utilGen">Cette option permet d'afficher les connexions TCP, les connexions en écoute (listening), ainsi que les noms de programme et les ID de processus (PID) associés à chaque connexion. (contrairement à la précédente, elle n'indique pas les numéros de port au format numérique)</p></p>
+
+      <p class="OptEx">c) -tnp<br>
+      <p class="utilGen">Cette option permet d'afficher les connexions TCP, les adresses et les numéros de port au format numérique, ainsi que le nom du programme et l'ID du processus (PID) associés à chaque connexion.</p></p>
+
+      <p class="OptEx">d) -lnp<br>
+      <p class="utilGen">Cette option permet d’afficher les connexions à l'écoute (listening), les adresses et les numéros de port au format numérique, ainsi que le nom du programme et l'ID du processus (PID) associés à chaque connexion.</p></p>
+
+    </section>
+
+  </main>
+  <footer>
+    <p>Christian Cerrud - All Rights Reserved TM & Copyright</p>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
